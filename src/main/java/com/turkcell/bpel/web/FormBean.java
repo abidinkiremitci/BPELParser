@@ -1,10 +1,10 @@
-package org.acme.sample.web;
+package com.turkcell.bpel.web;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.acme.sample.jsf.FacesViewScope;
+import com.turkcell.bpel.jsf.FacesViewScope;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 

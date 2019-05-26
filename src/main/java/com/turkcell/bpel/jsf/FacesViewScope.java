@@ -1,4 +1,4 @@
-package org.acme.sample.jsf;
+package com.turkcell.bpel.jsf;
 
 import java.util.Map;
 

@@ -1,16 +1,7 @@
-package org.acme.sample;
+package com.turkcell.bpel;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.faces.application.ProjectStage;
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.HandlesTypes;
-
-import org.acme.sample.jsf.FacesViewScope;
+import com.sun.faces.config.FacesInitializer;
+import com.turkcell.bpel.jsf.FacesViewScope;
 import org.apache.catalina.Context;
 import org.primefaces.util.Constants;
 import org.springframework.beans.factory.config.CustomScopeConfigurer;
@@ -28,20 +19,27 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.sun.faces.config.FacesInitializer;
+import javax.faces.application.ProjectStage;
+import javax.servlet.ServletContainerInitializer;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.HandlesTypes;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-public class SpringBootFacesApplication extends SpringBootServletInitializer {
+public class SpringBootBPELParser extends SpringBootServletInitializer {
     
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SpringBootFacesApplication.class, args);
+        SpringApplication.run(SpringBootBPELParser.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SpringBootFacesApplication.class);
+        return application.sources(SpringBootBPELParser.class);
     }
     
 	@Bean

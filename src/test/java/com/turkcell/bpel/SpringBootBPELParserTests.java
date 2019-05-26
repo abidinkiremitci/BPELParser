@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.acme.sample;
+package com.turkcell.bpel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -39,11 +39,12 @@ import org.springframework.test.context.web.WebAppConfiguration;
  * @author Phillip Webb
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SpringBootFacesApplication.class)
+@SpringApplicationConfiguration(classes = SpringBootBPELParser.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
 @DirtiesContext
-public class SpringBootFacesApplicationTests {
+public class SpringBootBPELParserTests
+{
 
 	@Value("${local.server.port}")
 	private int port;
